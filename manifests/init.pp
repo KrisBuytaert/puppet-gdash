@@ -31,7 +31,8 @@ class gdash (
     "${gdashroot}/config/gdash.yaml":
       content => template('gdash/gdash.yaml.erb'),
       group   => '0',
-      owner   => '0';
+      owner   => '0',
+      require => Package['gdash'],
   }
 
 
