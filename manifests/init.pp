@@ -16,11 +16,26 @@ class gdash (
 )
 {
   $gdashroot = '/usr/local/gdash/'
-  package {"rubygem-sinatra": ensure => '1.3.2-1'}
-  package {"rubygem-bundler": ensure => present }
-  package {"rubygem-tilt":    ensure => present }
-  package {"rubygem-rack":    ensure => present }
-  package {"rubygem-rack-protection": ensure => present }
+  package {
+    'rubygem-sinatra':
+      ensure => '1.3.2-1'
+  }
+  package {
+    'rubygem-bundler':
+      ensure => present
+  }
+  package {
+    'rubygem-tilt':
+      ensure => present
+  }
+  package {
+    'rubygem-rack':
+      ensure => present
+  }
+  package {
+    'rubygem-rack-protection':
+      ensure => present
+  }
 
 
 
