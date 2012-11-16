@@ -12,10 +12,18 @@
 #
 # [Remember: No empty lines between comments and class definition]
 class gdash (
-  $graphitehost='127.0.0.1'
+  $graphitehost='127.0.0.1',
+  $gdashroot = '/usr/local/gdash/'
 )
 {
-  $gdashroot = '/usr/local/gdash/'
+
+  # I`m expecting the package to install it's content in /usr/local/gdash
+
+
+  file{"${gdashroot}":
+    ensure => directory;
+  }
+
   #package {
   #  'rubygem-sinatra':
   #    ensure  => '1.3.3-1',
