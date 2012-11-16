@@ -42,7 +42,11 @@ class gdash (
 
 
 
-  package {"gdash": ensure => present }
+  package { 'gdash': ensure => present }
+  package { 'gdash-bundled-deps':
+    ensure => '0.98.14-1',
+  }
+
 
   file {
     "${gdashroot}/config/gdash.yaml":
