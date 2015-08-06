@@ -1,7 +1,7 @@
 class gdash::vhost {
 
   file {
-    "/etc/httpd/conf.d/gdash.conf":
+    '/etc/httpd/conf.d/gdash.conf':
       ensure  => 'file',
       group   => '0',
       mode    => '0644',
