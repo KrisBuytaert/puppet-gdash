@@ -20,8 +20,9 @@ class gdash (
   # I`m expecting the package to install it's content in /usr/local/gdash
 
 
-  file{"${gdashroot}":
-    ensure => directory;
+  file{
+    $gdashroot:
+      ensure => directory;
   }
 
   #package {
